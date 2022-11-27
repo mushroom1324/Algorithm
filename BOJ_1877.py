@@ -3,7 +3,7 @@ import sys
 M = int(sys.stdin.readline())
 
 if M == 1:
-    print('1 1 1 1 ')
+    print('1 1 1 1')
     quit()
 
 ansA = 0
