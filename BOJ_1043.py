@@ -1,5 +1,4 @@
 import sys
-from collections import deque
 
 N, M = map(int, sys.stdin.readline().split())
 
@@ -31,11 +30,3 @@ for i in party:
         cnt += 1
 
 print(cnt)
-
-
-# 9 4
-# 1 1
-# 4 1 2 3 4
-# 3 5 6 7 8
-# 2 8 9
-# 2 4 9
