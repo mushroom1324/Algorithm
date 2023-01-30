@@ -1,6 +1,6 @@
 """
 1106 :
-first implementation with bfs has failed due to time limit..
+first implementation with bfs has failed due to the time limit..
 ==============================================================================
 import sys
 from collections import deque
