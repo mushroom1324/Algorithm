@@ -15,14 +15,14 @@ op[')'] = 10
 
 
 for each in eq:
-    if each == '*' or each == '/' or each == '+' or each == '-':
+    if each in '+-*/':
         if stack:
-            top = stack[len(stack)-1]
+            top = stack[-1]
             if op[each] > op[top]:
                 stack.append(each)
             else:
                 while stack:
-                    top = stack[len(stack)-1]
+                    top = stack[-1]
                     if op[each] > op[top]:
                         break
                     else:
