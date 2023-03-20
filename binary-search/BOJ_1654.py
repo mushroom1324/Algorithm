@@ -17,11 +17,11 @@ while low < high:
         cnt += lan[i] // mid
 
     if cnt < N:
-        high = mid
+        high = mid - 1
     else:
         low = mid + 1
 
-print(low - 1)
+print(high)
 
 ''''
 4 11
@@ -29,5 +29,6 @@ print(low - 1)
 743
 457
 539
+
 
 '''
