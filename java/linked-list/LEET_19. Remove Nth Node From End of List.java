@@ -9,22 +9,54 @@
  * }
  */
 class Solution {
+
+    // private List<ListNode> arr = new ArrayList<>();
+
     public ListNode removeNthFromEnd(ListNode head, int n) {
+        return helper(head, n);   
+        
+    }
 
-        ListNode start = new ListNode(0);
-        ListNode slow = start, fast = start;
-        slow.next = head;
+    // not working bc of TLE
 
-        for(int i = 1; i <= n + 1; i++) {
+    // private ListNode helper(ListNode head, int n) {
+    //     ListNode cur = head;
+
+    //     // add nodes in arr
+    //     while (cur != null) {
+    //         arr.add(cur);
+    //         cur = cur.next;
+    //     }
+
+    //     // find nth node from backward
+    //     int i = arr.size() - 1;
+    //     while (n != 0) --i;
+        
+    //     // connect
+    //     arr.get(i - 1).next = arr.get(i + 1);
+
+    //     return head;
+        
+    // }
+
+    private ListNode helper(ListNode head, int n) {
+        
+        ListNode start = new ListNode();
+        start.next = head;
+        ListNode fast = start;
+        ListNode slow = start;
+
+        for(int i = 0; i < n; i++) {
             fast = fast.next;
         }
 
-        while(fast != null) {
+        while(fast.next != null) {
             slow = slow.next;
             fast = fast.next;
         }
-
         slow.next = slow.next.next;
+        
         return start.next;
     }
+
 }
